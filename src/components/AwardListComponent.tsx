@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react';
 import AwardItemComponent from './AwardItemComponent';
-import { MockAwards } from '../assets/MockAwards';
+import { MockAwards } from './MockAwards';
 
 // Define the award type
 interface Award {
@@ -94,7 +94,7 @@ function AwardsListComponent(): any {
                     </div>
                 </div>
             </div>
-            
+
             { 
             filteredArray.map((award, index) => {
                 return(
