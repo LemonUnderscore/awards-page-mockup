@@ -51,6 +51,23 @@ useEffect(() => {
 
 The AwarditemComponent populates itself with the JSON data that's being passed in as props.
 
+```
+filteredArray.map((award, index) => {
+                return(
+                    <AwardItemComponent key={index}
+                        index={index}
+                        id={award.id}
+                        group={award.group}
+                        img_src={award.img_src}
+                        card_src={award.card_src}
+                        categories={award.categories}
+                        results={award.results}
+                        year={award.year}
+                        mousePos={mousePos}
+                    />
+                )})
+```
+
 The card hovering effect is achieved by using the AwardListComponent to track the pointer position in screen-coordinates. These coordinates are passed to the AwardItemComponents as props to use for positioning the card.
 
 ```
