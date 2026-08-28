@@ -1,0 +1,203 @@
+.header {
+  position: relative;
+}
+
+#center {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  place-content: center;
+  place-items: center;
+  flex-grow: 1;
+}
+
+#footer {
+  display: flex;
+  border-top: 1px solid var(--border);
+  text-align: left;
+
+  & > div {
+    flex: 1 1 0;
+    padding: 32px;
+    @media (max-width: 1024px) {
+      padding: 24px 20px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+#footer-left {
+  border-right: 1px solid var(--border);
+
+  @media (max-width: 1024px) {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+}
+
+#spacer {
+  height: 88px;
+  border-top: 1px solid var(--border);
+  @media (max-width: 1024px) {
+    height: 48px;
+  }
+}
+
+/*CUSTOM CSS STARTS HERE*/
+.AwardList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  background-size: 5ch 5ch;
+  background-image: radial-gradient(circle, black 0.2ch, rgba(0, 0, 0, 0) 1px);
+  
+  /* background-image:
+    linear-gradient(to right, grey 1px, transparent 2px),
+    linear-gradient(to bottom, grey 1px, transparent 2px); */
+}
+
+.filterHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2ch;
+  margin: 1ch;
+  border-top: 1px solid var(--border);
+  
+  @media (max-width: 1024px) {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  h1 {
+    padding: 2ch;
+    width: auto;
+    justify-self: start;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 1ch;
+  }
+
+}
+
+.filter{
+  width: 100%;
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+}
+
+.AwardItem {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.AwardItemContainer {
+  background-color: var(--bg);
+  width: 90%;
+  display: grid;
+  padding: 1ch;
+  column-gap: 1ch;
+  row-gap: 2ch;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  border-top: 1px solid var(--border);
+  
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto;
+  }
+}
+
+.AwardItem:hover {
+  background-color: var(--border);
+  transition: ease-in-out 200ms;
+
+  .AwardItemContainer{
+    background-color: var(--border);
+    transition: ease-in-out 200ms;
+  }
+}
+  
+.AwardImageContainer {
+  display: flex;
+  width: auto;
+  padding: 1ch;
+  align-items: center;
+  justify-content: left;
+  background-color: var(--bg);
+  border-radius: 1ch;
+  
+  grid-column: 1 / span 5;
+
+  h2 {
+    padding: 1ch;
+  }
+
+  @media (max-width: 1024px) {
+    grid-column: span 12 / span 12;
+  }
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  li {
+    border-top: 1px solid var(--border);
+    height: 100%;
+  }
+}
+
+.AwardCategoryContainer {
+  padding: 1ch;
+  width: auto;
+  text-align: left;
+  grid-column: 6 / span 4;
+  background-color: var(--bg);
+  border-radius: 1ch;
+
+  @media (max-width: 1024px) {
+    grid-column: span 6 / span 6;
+    grid-row-start: 2;
+  }
+}
+
+.AwardResultsContainer {
+  padding: 1ch;
+  width: auto;
+  text-align: left;
+  grid-column: 10 / span 2;
+  background-color: var(--bg);
+  border-radius: 1ch;
+
+  @media (max-width: 1024px) {
+    grid-column: span 4 / span 4;
+    grid-column-start: 7;
+    grid-row-start: 2;
+  }
+}
+
+.AwardYearContainer {
+  padding: 1ch;
+  width: auto;
+  text-align: left;
+  grid-column: 12 / span 1;
+  background-color: var(--bg);
+  border-radius: 1ch;
+
+  @media (max-width: 1024px) {
+    grid-column: span 2 / span 2;
+    grid-column-start: 11;
+    grid-row-start: 2;
+  }
+}
