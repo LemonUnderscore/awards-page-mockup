@@ -26,7 +26,7 @@ function AwardItemComponent(props:any) {
                     pointerEvents: 'none',
                 }}>
                 <img
-                    src={`src/assets/images/${props.card_src}`}
+                    src={`awards-page-mockup/assets/images/${props.card_src}`}
                     alt="Award Image" 
                     width={64}
                 />
@@ -37,7 +37,7 @@ function AwardItemComponent(props:any) {
             <div className="AwardItemContainer">
                 <div className="AwardImageContainer">
                     <img
-                        src={`src/assets/images/${props.img_src}`}
+                        src={`awards-page-mockup/assets/images/${props.img_src}`}
                         alt="Award Image" 
                         width={200}
                     />
